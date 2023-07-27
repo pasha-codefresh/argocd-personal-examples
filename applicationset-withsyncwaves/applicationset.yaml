@@ -24,9 +24,9 @@ spec:
     spec:
       destination:
         server: "https://kubernetes.default.svc"
-        namespace: "{{namespace}}"
+        namespace: kargo
       project: default
       source:
         repoURL: https://github.com/pasha-codefresh/argocd-example-apps
         targetRevision: master
-        path: "{{path}}"
+        path: app2
