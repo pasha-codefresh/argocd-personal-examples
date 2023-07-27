@@ -30,3 +30,7 @@ spec:
         repoURL: https://github.com/pasha-codefresh/argocd-example-apps
         targetRevision: master
         path: "{{path}}"
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
