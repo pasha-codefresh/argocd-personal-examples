@@ -7,11 +7,11 @@ spec:
   generators:
     - list:
         elements:
-        - wave: 1
+        - wave: "1"
           path: guestbook
           namespace: golist
           name: app1
-        - wave: 2
+        - wave: "2"
           path: guestbook
           namespace: kargo
           name: app2
