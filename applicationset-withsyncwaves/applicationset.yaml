@@ -19,8 +19,8 @@ spec:
     metadata:
       name: "{{name}}"
       namespace: argocd
-      annotations:
-        argocd.argoproj.io/sync-wave: "{{wave}}"
+#      annotations:
+#        argocd.argoproj.io/sync-wave: "{{wave}}"
     spec:
       destination:
         server: "https://kubernetes.default.svc"
