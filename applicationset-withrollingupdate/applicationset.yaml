@@ -17,7 +17,7 @@ spec:
           name: app2
   strategy:
     type: RollingUpdate
-    rollingUpdate:
+    rollingSync:
       steps:
         - matchExpressions:
             - key: rolloutWave
