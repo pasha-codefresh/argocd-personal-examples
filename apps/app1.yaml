@@ -14,3 +14,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc  # Replace with your Kubernetes cluster API URL
     namespace: golist
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
