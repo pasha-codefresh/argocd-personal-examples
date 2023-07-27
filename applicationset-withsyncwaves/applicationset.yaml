@@ -19,10 +19,10 @@ spec:
         argocd.argoproj.io/sync-wave: "{{wave}}"
     spec:
       destination:
-        server: 'https://kubernetes.default.svc'
-        namespace: {{namespace}}
+        server: "https://kubernetes.default.svc"
+        namespace: "{{namespace}}"
       project: default
       source:
         repoURL: https://github.com/pasha-codefresh/argocd-example-apps
         targetRevision: master
-        path: {{path}}
+        path: "{{path}}"
