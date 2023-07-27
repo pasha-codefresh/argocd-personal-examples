@@ -6,13 +6,13 @@ metadata:
 spec:
   generators:
     - list:
-      elements:
-        - wave: 1
-          path: guestbook
-          namespace: golist
-        - wave: 2
-          path: guestbook
-          namespace: kargo
+        elements:
+          - wave: 1
+            path: guestbook
+            namespace: golist
+          - wave: 2
+            path: guestbook
+            namespace: kargo
   template:
     metadata:
       annotations:
