@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-notifications-cm
+data:
+  service.slack: |
+    token: $slack-token
+  trigger.on-deployed: |
+    - description: Application is synced and healthy. Triggered once per commit.
+      when: app.status.health.status == 'Healthy' and app.status.operationState != nil and app.status.operationState.phase in ['Succeeded']
+      oncePer: app.status.operationState.syncResult.revision
+      send:
+      - app-deployed
+  template.app-deployed: |
+    message: "Author: {{(call .repo.GetCommitMetadata .app.status.sync.revision).Author}}"
