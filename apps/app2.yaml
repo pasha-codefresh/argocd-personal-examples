@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-  name: app1
+  name: app2
   namespace: argocd
 spec:
   project: default  # Replace with your desired ArgoCD project
