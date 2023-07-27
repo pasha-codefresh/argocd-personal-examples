@@ -7,14 +7,20 @@ spec:
   generators:
     - list:
         elements:
-        - path: guestbook
+        - wave: 1
+          path: guestbook
           namespace: golist
-        - path: guestbook
+          name: app1
+        - wave: 2
+          path: guestbook
           namespace: kargo
+          name: app2
   template:
-    # metadata:
-     # annotations:
-     #   argocd.argoproj.io/sync-wave: "{{wave}}"
+    metadata:
+      name: "{{name}}"
+      namespace: argocd
+      annotations:
+        argocd.argoproj.io/sync-wave: "{{wave}}"
     spec:
       destination:
         server: "https://kubernetes.default.svc"
