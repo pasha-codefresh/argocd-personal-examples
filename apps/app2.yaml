@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: app1
+  namespace: argocd
+spec:
+  project: default  # Replace with your desired ArgoCD project
+  source:
+    repoURL: https://github.com/pasha-codefresh/argocd-example-apps
+    targetRevision: master  # Replace with the target revision (commit, tag, or branch)
+    path: guestbook
+  destination:
+    server: https://kubernetes.default.svc  # Replace with your Kubernetes cluster API URL
+    namespace: kargo
