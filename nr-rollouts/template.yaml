@@ -3,8 +3,6 @@ kind: AnalysisTemplate
 metadata:
   name: success-rate
 spec:
-  args:
-    - name: application-name
   metrics:
     - name: success-rate
       successCondition: result.successRate >= 0.95
@@ -12,4 +10,4 @@ spec:
         newRelic:
           profile: my-newrelic-secret  # optional, defaults to 'newrelic'
           query: |
-            FROM Transaction SELECT percentage(count(*), WHERE httpResponseCode != 500) as successRate where appName = '{{ args.application-name }}'
+            FROM Transaction SELECT percentage(count(*), WHERE httpResponseCode != 500) as successRate where appName = 'test'
