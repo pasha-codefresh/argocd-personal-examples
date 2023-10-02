@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/node-selector: node-role.kubernetes.io/business=true
+  name: envoy-cit-system-b
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/node-selector: node-role.kubernetes.io/perimeter=true
+  name: envoy-cit-system-p
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/node-selector: node-role.kubernetes.io/business=true
+  name: envoy-cs-system-b
