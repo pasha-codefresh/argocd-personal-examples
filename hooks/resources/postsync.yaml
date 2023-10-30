@@ -13,10 +13,7 @@ spec:
       containers:
         - name: job-callback-success
           image: nginx:1.15.4
-          command: ["bash", "-c"]
-          args:
-            - |
-              echo "{}" | jq ".status = \"SUCCESS\"" | tee status.json
+          command: ["sleep", "3600"]
           env:
             - name: CI_PROJECT_ID
               value: test
