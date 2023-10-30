@@ -13,7 +13,7 @@ spec:
       containers:
         - name: job-callback-success
           image: nginx:1.15.4
-          command: ["sleep", "100"]
+          command: ["sleep", "360"]
           env:
             - name: CI_PROJECT_ID
               value: test
