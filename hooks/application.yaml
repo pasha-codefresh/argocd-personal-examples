@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: hooks
-  namespace: argocd
+  namespace: codefresh
 spec:
   project: default  # Replace with your desired ArgoCD project
   source:
