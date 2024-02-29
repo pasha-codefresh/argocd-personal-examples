@@ -31,7 +31,8 @@ data:
             "value": "{{.app.spec.source.repoURL}}",
             "short": true
           }
-          {{range $index, $c := .app.status.conditions}}
+          {{range $index, $c := .app.status.history}}
+          ,
           {
             "title": "{{$c.type}}",
             "value": "{{$c.message}}",
