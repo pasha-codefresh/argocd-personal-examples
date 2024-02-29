@@ -32,7 +32,6 @@ data:
             "short": true
           }
           {{range $index, $c := .app.status.conditions}}
-          ,
           {
             "title": "{{$c.type}}",
             "value": "{{$c.message}}",
